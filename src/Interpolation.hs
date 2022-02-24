@@ -1,8 +1,12 @@
 module Interpolation (
-    dividedDifferences
+    dividedDifferences,
+
+    makeSpline,
+    getSegments,
+    evaluateSpline
 ) where
 
-import Interpolation.CubicSpline
+import Interpolation.CubicSpline        (makeSpline,getSegments,evaluateSpline)
 import Interpolation.DividedDifferences (dividedDifferences)
 
 
