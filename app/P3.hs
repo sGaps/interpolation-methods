@@ -1,6 +1,7 @@
 module Main where
 
 import Interpolation.CubicSpline (makeSpline,getSegments,showSegment)
+import Data.Vector (indexed)
 import Control.Monad (forM_)
 
 ts , ys :: Num a => [a]
@@ -13,7 +14,7 @@ main = do
     putStrLn $ "valores de del eje x: " ++ show ts
     putStrLn $ "valores de del eje y: " ++ show ys
     putStrLn $ "Coeficientes obtenidos:"
-    forM_ (zip [0..] . getSegments . makeSpline ys $ ts) (\(ix,seg) ->
+    forM_ (indexed . getSegments . makeSpline ys $ ts) (\(ix,seg) ->
         putStrLn $ "    S" ++ show ix ++ ": " ++ (showSegment seg "")
         )
 
