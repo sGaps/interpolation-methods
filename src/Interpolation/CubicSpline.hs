@@ -17,11 +17,6 @@ import qualified Data.Vector         as V
 import qualified Data.Vector.Mutable as MV
 
 
--- TODO: Remove
-ys , ts :: Num a => [a]
-ys = [ 2, 6, 9, 2, 9, 6, 8, 7]
-ts = [-3,-2,-1, 0, 1, 2, 3, 4]
-
 -- Returns a vector of hs' and bs'
 prepareTridiagonal :: Fractional a => Int -> V.Vector a -> V.Vector a -> (V.Vector a, V.Vector a)
 prepareTridiagonal size ts ys = V.unzip $ runST $ do
