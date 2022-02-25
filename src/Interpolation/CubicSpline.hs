@@ -1,3 +1,13 @@
+{-|
+Module      : Interpolation.CubicSpline
+Description : This module implements the Cubic Splines method.
+Copyright   : (c) Gabriel Peraza, 2022
+License     : MIT
+Stability   : experimental
+
+This module implements the cubic spline method. It also exports
+some functions that makes easier to evaluate and print the spline.
+-}
 module Interpolation.CubicSpline (
     Spline(..),
     Segment(..),
